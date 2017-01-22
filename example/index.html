@@ -7,10 +7,20 @@
       h2 {
         color: #09f;
       }
+
+      ui-panel-frame {
+        width: 200px;
+        height: 200px;
+      }
     </style>
+    <script>
+      require('../lib/renderer');
+    </script>
   </head>
 
   <body>
     <h2>Panel Example</h2>
+    <ui-panel-frame id="foo" src="app://panels/foo.js"></ui-panel-frame>
+    <ui-panel-frame id="bar" src="app://panels/bar.js"></ui-panel-frame>
   </body>
 </html>
