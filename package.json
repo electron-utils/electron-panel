@@ -24,6 +24,7 @@
   "dependencies": {
     "electron-ipc-listener": "^1.0.0",
     "electron-platform": "^1.2.0",
+    "electron-protocols": "^1.0.0",
     "mousetrap": "^1.6.0"
   },
   "devDependencies": {

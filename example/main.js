@@ -1,8 +1,11 @@
 'use strict';
 
 const {app, BrowserWindow} = require('electron');
+const protocols = require('electron-protocols');
 
 let win;
+
+protocols.register('app', protocols.basepath(app.getAppPath()));
 
 app.on('ready', function () {
   win = new BrowserWindow({

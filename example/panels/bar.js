@@ -15,7 +15,7 @@ module.exports = {
 
   template: `
     <h1>A dockable panel</h1>
-    <ui-button id="btn">Send Message</ui-button>
+    <button id="btn">Send Message</button>
   `,
 
   $: {
