@@ -1,30 +1,37 @@
 'use strict';
 
-const {ipcRenderer} = require('electron');
-
 module.exports = {
   style: `
     :host {
-      margin: 5px;
+      padding: 5px;
+      box-sizing: border-box;
+      background: #333;
+      color: #888;
     }
 
-    h1 {
+    h2 {
       color: #f90;
+      text-align: center;
     }
   `,
 
   template: `
-    <h1>A dockable panel</h1>
-    <button id="btn">Send Message</button>
+    <h2>Bar</h2>
+    <div id="logs"></div>
   `,
 
   $: {
-    btn: '#btn'
+    logs: '#logs'
   },
 
   ready () {
-    this.$btn.addEventListener('confirm', () => {
-      ipcRenderer.send('simple:say-hello', 'Hello, this is simple panel');
-    });
-  }
+  },
+
+  messages: {
+    'app:say' ( event, message ) {
+      let div = document.createElement('div');
+      div.innerText = message;
+      this.$logs.appendChild(div);
+    }
+  },
 };

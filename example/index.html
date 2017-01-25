@@ -9,9 +9,14 @@
       }
 
       ui-panel-frame {
-        width: 200px;
         height: 200px;
         border: 1px solid black;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .content {
+        margin: 5px;
       }
     </style>
     <script>
@@ -21,7 +26,22 @@
 
   <body>
     <h2>Panel Example</h2>
-    <ui-panel-frame id="foo" src="app://panels/foo.js"></ui-panel-frame>
-    <ui-panel-frame id="bar" src="app://panels/bar.js"></ui-panel-frame>
+    <div class="content">
+      <div>
+        <input id="input"></input>
+        <button id="btn">app:say</button>
+      </div>
+      <ui-panel-frame id="foo" src="app://panels/foo.js"></ui-panel-frame>
+      <ui-panel-frame id="bar" src="app://panels/bar.js"></ui-panel-frame>
+    </div>
+
+    <script>
+      const {ipcRenderer} = require('electron');
+      let inputEL = document.getElementById('input');
+      let btnEL = document.getElementById('btn');
+      btnEL.onclick = () => {
+        ipcRenderer.send('btn:click', inputEL.value);
+      }
+    </script>
   </body>
 </html>
