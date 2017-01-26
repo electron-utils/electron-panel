@@ -30,8 +30,20 @@ module.exports = {
   messages: {
     'app:say' ( event, message ) {
       let div = document.createElement('div');
-      div.innerText = message;
+      div.innerText = `[app:say] ${message}`;
       this.$logs.appendChild(div);
-    }
+    },
+
+    'foo:say' ( event, message ) {
+      let div = document.createElement('div');
+      div.innerText = `[foo:say] ${message}`;
+      this.$logs.appendChild(div);
+    },
+
+    'say' ( event, message ) {
+      let div = document.createElement('div');
+      div.innerText = `[say] ${message}`;
+      this.$logs.appendChild(div);
+    },
   },
 };

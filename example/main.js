@@ -2,6 +2,7 @@
 
 const {app, BrowserWindow, ipcMain} = require('electron');
 const protocols = require('electron-protocols');
+const Panel = require('../lib/main');
 
 let win;
 
@@ -16,6 +17,10 @@ app.on('ready', function () {
   win.loadURL('file://' + __dirname + '/index.html');
 });
 
-ipcMain.on('btn:click', (event, msg) => {
-  win.webContents.send('app:say', msg);
+ipcMain.on('btn:click', (event, channel, msg) => {
+  win.webContents.send(`${channel}:say`, msg);
+});
+
+ipcMain.on('btn-panel:click', (event, channel, msg) => {
+  Panel.send(channel, 'say', msg);
 });

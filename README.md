@@ -21,6 +21,12 @@ TODO
 
 TODO
 
+## TODO
+
+  - Warnning/Error notification at panel-frame.
+  - Out of date notification at panel-frame, and a reload button for user.
+
+
 ## License
 
 MIT © 2017 Johnny Wu

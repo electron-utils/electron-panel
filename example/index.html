@@ -29,7 +29,13 @@
     <div class="content">
       <div>
         <input id="input"></input>
-        <button id="btn">app:say</button>
+        <select id="select">
+          <option>app</option>
+          <option>foo</option>
+          <option>bar</option>
+        </select>
+        <button id="btn">send2win</button>
+        <button id="btn-panel">send2panel</button>
       </div>
       <ui-panel-frame id="foo" src="app://panels/foo.js"></ui-panel-frame>
       <ui-panel-frame id="bar" src="app://panels/bar.js"></ui-panel-frame>
@@ -38,9 +44,16 @@
     <script>
       const {ipcRenderer} = require('electron');
       let inputEL = document.getElementById('input');
+      let selectEL = document.getElementById('select');
+
       let btnEL = document.getElementById('btn');
       btnEL.onclick = () => {
-        ipcRenderer.send('btn:click', inputEL.value);
+        ipcRenderer.send('btn:click', selectEL.value, inputEL.value);
+      }
+
+      let btnPanelEL = document.getElementById('btn-panel');
+      btnPanelEL.onclick = () => {
+        ipcRenderer.send('btn-panel:click', selectEL.value, inputEL.value);
       }
     </script>
   </body>
