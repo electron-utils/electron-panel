@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Electron App</title>
+  </head>
+
+  <body>
+    <div class="label">Testing...</div>
+    <ui-panel-frame id="foo" src="app://panel-foo.js"></ui-panel-frame>
+
+    <script>
+      const {ipcRenderer} = require('electron');
+      const panel = require('../../../index.js');
+
+      ipcRenderer.on('ready-to-send', () => {
+        panel.send('bar', 'say');
+        panel.send('bar', 'say', 'hello bar!');
+        document.getElementById('foo');
+      });
+
+      setTimeout(() => {
+        document.querySelector('.label').innerText = 'Ready';
+      }, 200);
+    </script>
+  </body>
+</html>

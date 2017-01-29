@@ -27,6 +27,7 @@
     "electron-ipc-plus": "^1.2.3",
     "electron-platform": "^1.2.0",
     "electron-protocols": "^1.0.0",
+    "less": "^2.7.2",
     "mousetrap": "^1.6.0"
   },
   "devDependencies": {

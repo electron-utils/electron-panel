@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Electron App</title>
+  </head>
+
+  <body>
+    <div class="label">Testing...</div>
+    <ui-panel-frame id="bar" src="app://panel-bar.js"></ui-panel-frame>
+
+    <script>
+      const panel = require('../../../index.js');
+
+      setTimeout(() => {
+        document.querySelector('.label').innerText = 'Ready';
+      }, 200);
+    </script>
+  </body>
+</html>

@@ -4,24 +4,32 @@
     <meta charset="utf-8">
     <title>Panel Example</title>
     <style>
+      body {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
       h2 {
         color: #09f;
       }
 
+      .content {
+        margin: 5px;
+
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
       ui-panel-frame {
-        height: 200px;
+        flex: 1;
         border: 1px solid black;
         margin-top: 5px;
         margin-bottom: 5px;
       }
-
-      .content {
-        margin: 5px;
-      }
     </style>
-    <script>
-      require('../lib/renderer');
-    </script>
   </head>
 
   <body>
@@ -42,7 +50,9 @@
     </div>
 
     <script>
+      const panel = require('../../index');
       const {ipcRenderer} = require('electron');
+
       let inputEL = document.getElementById('input');
       let selectEL = document.getElementById('select');
 

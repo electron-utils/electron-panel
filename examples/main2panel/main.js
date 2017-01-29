@@ -2,7 +2,7 @@
 
 const {app, BrowserWindow, ipcMain} = require('electron');
 const protocols = require('electron-protocols');
-const Panel = require('../lib/main');
+const panel = require('../../index');
 
 let win;
 
@@ -22,5 +22,11 @@ ipcMain.on('btn:click', (event, channel, msg) => {
 });
 
 ipcMain.on('btn-panel:click', (event, channel, msg) => {
-  Panel.send(channel, 'say', msg);
+  panel.send(channel, 'say', msg);
+});
+
+ipcMain.on('btn-reply:click', (event, channel, msg) => {
+  panel.send(channel, 'say-and-reply', msg, (err, msg2) => {
+    console.log(`[main:say] ${msg2}`);
+  });
 });
