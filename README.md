@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/electron-utils/electron-panel.svg)](https://david-dm.org/electron-utils/electron-panel)
 [![devDependency Status](https://david-dm.org/electron-utils/electron-panel/dev-status.svg)](https://david-dm.org/electron-utils/electron-panel#info=devDependencies)
 
-Manipulate panels in window for Electron
+Manipulate panels in window for Electron.
 
 ## Install
 
