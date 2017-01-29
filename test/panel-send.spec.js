@@ -63,7 +63,6 @@ describe('app-panel2panel', function () {
       .waitUntilTextExists('.label', 'Ready')
       .getRenderProcessLogs()
       .then(function (logs) {
-        console.log(logs);
         assert.equal(logs.length, 2);
         assert.ok(logs[0].message.indexOf('[say] undefined') !== -1);
         assert.ok(logs[1].message.indexOf('[say] hello bar!') !== -1);

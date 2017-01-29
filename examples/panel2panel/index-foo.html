@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Panel Example</title>
+    <style>
+      body {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      ui-panel-frame {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        border: 1px solid black;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ui-panel-frame id="foo" src="app://panels/foo.js"></ui-panel-frame>
+
+    <script>
+      const panel = require('../../index');
+    </script>
+  </body>
+</html>

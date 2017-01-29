@@ -13,19 +13,83 @@ Manipulate panels in window for Electron
 npm install --save electron-panel
 ```
 
+## Run Examples
+
+```bash
+npm start examples/${name}
+```
+
 ## Usage
 
-TODO
+**main process**
 
-## API Reference
+```javascript
+// init panel in main process
+const panel = require('electron-panel');
+const protocols = require('electron-protocols');
 
-TODO
+// register a protocol so that the panel can load by it.
+protocols.register('app', protocols.basepath(app.getAppPath()));
+```
+
+**renderer process**
+
+**panel.js**
+
+```javascript
+module.exports = {
+  style: `
+    :host {
+      .layout-vertical();
+
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: #f90;
+      text-align: center;
+    }
+  `,
+
+  template: `
+    <h2>Panel</h2>
+  `,
+
+  ready () {
+    // do something
+  },
+};
+```
+
+**index.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Panel Example</title>
+  </head>
+
+  <body>
+    <ui-panel-frame id="foobar" src="app://panel.js"></ui-panel-frame>
+  </body>
+</html>
+```
+
+## Documentation
+
+  - [Panel (main process)](docs/panel-main.md)
+  - [Panel (renderer process)](docs/panel-renderer.md)
+  - [Panel Frame](docs/panel-frame.md)
 
 ## TODO
 
-  - Warnning/Error notification at panel-frame.
-  - Out of date notification at panel-frame, and a reload button for user.
-
+  - [New Feature] Warnning/Error notification at panel-frame.
+  - [New Feature] Out of date notification at panel-frame, and a reload button for user.
+  - [Test] main2panel-reply
+  - [Test] panel2panel-reply
 
 ## License
 
