@@ -1,7 +1,5 @@
 'use strict';
 
-'use strict';
-
 const platform = require('electron-platform');
 
 let panel;
