@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/electron-utils/electron-panel",
   "dependencies": {
-    "clean-css": "^4.0.0",
+    "clean-css": "^4.0.5",
     "electron-ipc-listener": "^1.0.0",
     "electron-ipc-plus": "^1.2.3",
     "electron-platform": "^1.2.0",
@@ -31,8 +31,8 @@
     "mousetrap": "^1.6.0"
   },
   "devDependencies": {
-    "electron": "^1.4.14",
+    "electron": "^1.4.15",
     "mocha": "^3.2.0",
-    "spectron": "3.4.1"
+    "spectron": "^3.6.0"
   }
 }
