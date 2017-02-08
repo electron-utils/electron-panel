@@ -28,3 +28,15 @@ panel.send('foobar', 'foobar:say-hello', err => {
   console.log('foobar replied');
 });
 ```
+
+### panel.contains (el)
+
+ - `el` HTMLElement
+
+Check if an element is a panel frame or in a panel frame.
+
+### panel.find (panelID)
+
+ - `panelID` string
+
+Find panel frame via `panelID`.
