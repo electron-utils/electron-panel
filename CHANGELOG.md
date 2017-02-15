@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### v1.2.1
+
+  - Prevent load the panel frame more than once when its src changed.
+
 ### v1.2.0
 
   - Use Custom Element v1.
