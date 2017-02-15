@@ -7,6 +7,10 @@
 
 Manipulate panels in window for Electron.
 
+**NOTE**
+
+This module use Custom Element v1 which only support in Electron 1.15.x or above version.
+
 ## Install
 
 ```bash
