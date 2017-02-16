@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v1.3.0
+
+  - Add version conflict protection.
+  - Change ipc message header from `panel:` to `electron-panel:`.
+
 ### v1.2.1
 
   - Prevent load the panel frame more than once when its src changed.
