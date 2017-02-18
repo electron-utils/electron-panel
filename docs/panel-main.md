@@ -8,6 +8,14 @@
 
 Find and return an editor window that contains the panelID.
 
+### panel.getPanels (win)
+
+  - `BrowserWindow` win
+
+Returns `Array` - panelID(s)
+
+Get all panels in window.
+
 ### panel.send (panelID, message[, ...args, callback, timeout])
 
  - `panelID` string - Panel ID.

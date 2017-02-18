@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### v1.3.2
+
+  - Add `panel.getPanels`.
+
 ### v1.3.0
 
   - Add version conflict protection.
