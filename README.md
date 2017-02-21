@@ -84,9 +84,11 @@ module.exports = {
 
 ## Documentation
 
-  - [Panel (main process)](docs/panel-main.md)
-  - [Panel (renderer process)](docs/panel-renderer.md)
-  - [Panel Frame](docs/panel-frame.md)
+  - Main Process
+    - [Panel](docs/panel-main.md)
+  - Renderer Process
+    - [Panel](docs/panel-renderer.md)
+    - [Panel Frame](docs/panel-frame.md)
 
 ## TODO
 
