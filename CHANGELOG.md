@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### v1.3.4
+
+  - Return closed results when calling `panel.close()`.
+
 ### v1.3.2
 
   - Add `panel.getPanels`.
