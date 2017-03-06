@@ -96,6 +96,8 @@ module.exports = {
   - [New Feature] Out of date notification at panel-frame, and a reload button for user.
   - [Test] main2panel-reply
   - [Test] panel2panel-reply
+  - [Test] panelFrame.close()
+  - [Test] panel.closeAll()
 
 ## License
 

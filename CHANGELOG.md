@@ -1,8 +1,12 @@
 ## CHANGELOG
 
+### v1.3.5
+
+  - Add `panel.closeAll()`.
+
 ### v1.3.4
 
-  - Return closed results when calling `panel.close()`.
+  - Return closed results when calling `panelFrame.close()`.
 
 ### v1.3.2
 

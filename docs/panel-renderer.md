@@ -40,3 +40,7 @@ Check if an element is a panel frame or in a panel frame.
  - `panelID` string
 
 Find panel frame via `panelID`.
+
+### panel.closeAll ()
+
+Close all panels. If any of the panel cancel close, none of the panel will be closed.
