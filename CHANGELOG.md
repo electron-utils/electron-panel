@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### v1.3.6
+
+  - Report error when less compile failed.
+
 ### v1.3.5
 
   - Add `panel.closeAll()`.
