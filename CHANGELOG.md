@@ -1,6 +1,6 @@
 ## CHANGELOG
 
-### v1.3.6
+### v1.3.9
 
   - Report error when less compile failed.
 
