@@ -111,3 +111,9 @@ module.exports = {
   },
 };
 ```
+
+## Events
+
+### name-changed
+
+Trigger when `name` has been set.
